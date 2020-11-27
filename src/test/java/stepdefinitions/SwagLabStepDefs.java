@@ -4,16 +4,24 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.SwagLabs;
 import utilities.ConfigReader;
 import utilities.Driver;
 
+import java.util.concurrent.TimeUnit;
+
 public class SwagLabStepDefs {
     SwagLabs swagLabs = new SwagLabs();
+
+
+
 
     @Given("user on the homepage")
     public void user_on_the_homepage() {
         Driver.getDriver().get(ConfigReader.getProperty("swag_url"));
+
     }
 
     @When("user enters username")
@@ -29,6 +37,8 @@ public class SwagLabStepDefs {
     @When("user clicks login")
     public void user_clicks_login() {
         swagLabs.loginButton.click();
+
+
     }
 
     @When("user adds first material to the cart")
