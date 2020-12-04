@@ -15,7 +15,9 @@ import org.junit.runner.RunWith;
         //Path of the step definition folder
 
         glue="database_stepdefinition",
-        tags = "@bank",
+        //tags = "@bank",
+        //tags= "@bank2",
+        tags="bank3",
         dryRun = false
 )
 public class Runner {
